@@ -1,4 +1,4 @@
-'use client'
+
 import React from 'react'
 import SingleProduct from '../Components/SingleProduct'
 import ProductsData from '../Components/ProductsData'

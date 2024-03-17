@@ -29,7 +29,7 @@ const Header = () => {
       <div className='flex justify-around gap-5 lg:text-xl'>
       <Link href='/login' className='btn'>Login</Link>
       <Link href='/Register' className='btn flex gap-2 items-center'> <FaUser /> Register</Link>
-      <Link href='cart' className='btn black_btn flex gap-2 items-center'><FaCartPlus /> Cart </Link>
+      <Link href='/cart' className='btn black_btn flex gap-2 items-center'><FaCartPlus /> Cart </Link>
       </div>
       </div>
       

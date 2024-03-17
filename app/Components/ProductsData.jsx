@@ -31,6 +31,7 @@ const ProductsData = ({ item }) => {
             height={400}
             className="group-hover:scale-110 duration-200"
           />
+          
 
           {item.isNew && (
             <div className="absolute top-2 right-4 bg-white group-hover:bg-orange-500 p-2 rounded-full group-hover:text-white  ">
