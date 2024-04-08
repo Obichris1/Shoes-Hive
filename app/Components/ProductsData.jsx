@@ -20,7 +20,7 @@ const ProductsData = ({ item }) => {
 
     
   return (
-    <div className="flex flex-col items-center border-2 rounded-xl m-4 p-4 border-black">
+    <div className="flex flex-col items-center border-2 rounded-xl m-4 p-4 border-[#CBD5E1]">
       {/* ImageContainer */}
       <Link href={{ pathname: "/product", query: { _id: item._id } }}>
         <div className="relative bg-slate-200 p-12 group w-full">

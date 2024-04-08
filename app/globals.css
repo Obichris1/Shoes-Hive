@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 .btn{
-    padding: 10px;
-    border-radius: 30px;
+    /* padding: 10px; */
+    /* border-radius: 30px; */
     color: rgb(29, 27, 27);
     background-color: rgb(212, 194, 194);
+    text-align: center;
 }
 .black_btn{
     color: #fff;

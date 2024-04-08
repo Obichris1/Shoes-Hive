@@ -16,9 +16,9 @@ const Hero = () => {
   const data = [
     {
       id : 1,
-      image: '/air.png',
-      text: 'Stock up on sneakers and limited edition on our sales week',
-      title : 'Foorces'
+      image: '/full_nike.jpg',
+      text: 'Get amazing deals on wears and sneakers every friday!',
+      title : 'Deals'
     },
 
     {

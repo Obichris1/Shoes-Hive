@@ -16,7 +16,7 @@ export const shoppingSlice = createSlice({
       );
       if (existingProduct) {
         existingProduct.quantity += action.payload.quantity;
-        console.log(state.productData);
+        // console.log(state.productData);
       } else {
         state.productData.push(action.payload);
       }
@@ -32,10 +32,28 @@ export const shoppingSlice = createSlice({
             existingProduct.quantity === 1
         }
         else{
-            existingProduct.quantity--
+         existingProduct.quantity--
 
         }
 
+    },
+    resetCart : (state) =>{
+        state.productData = []
+    }, 
+
+    deleteProduct : (state,action) => {
+        state.productData = state.productData.filter((item) => 
+              item._id !== action.payload._id
+        )
+
+    },
+
+    addUser : (state,action) =>{
+      state.userInfo = action.payload
+    },
+
+    deleteUser : (state) => {
+      state.userInfo =  null
     }
   },
 
@@ -43,6 +61,6 @@ export const shoppingSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addToCart } = shoppingSlice.actions;
+export const { addToCart,increaseQuantity,decreaseQuantity,resetCart,deleteProduct,addUser,deleteUser} = shoppingSlice.actions;
 
 export default shoppingSlice.reducer;

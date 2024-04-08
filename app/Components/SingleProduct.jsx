@@ -33,7 +33,7 @@ const SingleProduct = ({ product }) => {
         </p>
 
         <span>
-          SKU : <span>{product._id}</span>
+          SKU : <span>{product?._id}</span>
         </span>
 
 

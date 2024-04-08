@@ -6,7 +6,7 @@ import ProductsData from './ProductsData'
 
 const Products = () => {
   return (
-    <div className='border-2 border-red-500 gap-4 mt-10 grid lg:grid-cols-3 xl:grid-cols-4'>
+    <div className='border-2 gap-4 mt-10 grid lg:grid-cols-3 xl:grid-cols-4'>
       {productData.map((item) => (
         <ProductsData key={item._id} item={item} className='' />
 

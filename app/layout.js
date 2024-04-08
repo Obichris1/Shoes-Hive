@@ -4,7 +4,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 import "slick-carousel/slick/slick.css";
-import { Providers } from "./redux/Providers";
+import { Providers } from "./Components/Providers";
 import { store } from "./redux/store";
 
 export const metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         ></link>
       </head>
       <Providers>
-      <body className="font-[Jost] mx-20 bg-[#F3F2EE]" >
+      <body className="font-[Jost]  bg-[#F3F2EE]" >
         
         <Header />
         {children}

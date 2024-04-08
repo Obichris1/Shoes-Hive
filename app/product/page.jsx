@@ -14,11 +14,11 @@ const page = ({searchParams}) => {
   }
   // const params = useParams() 
   const _idString = searchParams._id           //returns a string of a number
-  console.log(_idString);
+  // console.log(_idString);
   
 
   const _id = Number(_idString);    //convert strings to numbers
-  console.log(_id);
+  // console.log(_id);
 const product = getSingleProduct(_id)
 
   return (
