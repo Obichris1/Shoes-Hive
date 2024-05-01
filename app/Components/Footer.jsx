@@ -3,7 +3,7 @@ import { FaFacebook,FaInstagram,FaTwitter } from 'react-icons/fa'
 import Image from 'next/image'
 const Footer = () => {
   return (
-    <div className='bg-[#333] h-[40vh] flex justify-between text-white relative p-20 mt-5 '>
+    <div className='bg-[#333] h-[80vh] md:h-[40vh] flex flex-col md:flex-row justify-between text-white relative p-20 mt-5 '>
        {/* logo */}
        <div>
          <h1 className='uppercase text-2xl font-bold'>

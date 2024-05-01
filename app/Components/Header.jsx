@@ -9,6 +9,7 @@ import { FaCartPlus } from "react-icons/fa";
 import { signIn, signOut, useSession,getProviders } from "next-auth/react";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, deleteUser } from "../redux/shoppingSlice";
+import toast,{Toaster} from "react-hot-toast";
 
 const Header = () => {
   const { data: session } = useSession();
@@ -37,16 +38,16 @@ const Header = () => {
         <div className="hidden md:block">
           <SearchProducts />
         </div>
-
         {/* links */}
-        <div className="flex justify-around gap-5 ">
-          <div
+          {!session?.user ? (
+           <div className="flex justify-around gap-5 ">
+          <button
            
             className="btn p-2 flex items-center rounded-full"
-            onClick={() => signIn('google')}
+            onClick={() => signIn('credentials') && toast.success('LoggedIn Sucessfully',{duration : 10000})}
           >
             Login
-          </div>
+          </button>
           <Link
             href="/Register"
             className="btn flex gap-2 items-center p-3 rounded-full"
@@ -54,6 +55,31 @@ const Header = () => {
             {" "}
             <FaUser /> Register
           </Link>
+          {/* <Link
+            href="/cart"
+            className="btn black_btn flex gap-2 p-3 items-center rounded-full"
+          >
+            <FaCartPlus /> Cart{" "}
+          </Link> */}
+        </div>)  
+
+        : 
+        (
+          <div className="flex justify-around gap-5 ">
+          <button
+           
+            className=" p-2 flex items-center rounded-full bg-[#333] text-white"
+            onClick={() => signOut() && toast.success('Logged Out Successfully')}
+          >
+            LogOut
+          </button>
+          {/* <Link
+            href="/Register"
+            className="btn flex gap-2 items-center p-3 rounded-full"
+          >
+            {" "}
+            <FaUser /> Register
+          </Link> */}
           <Link
             href="/cart"
             className="btn black_btn flex gap-2 p-3 items-center rounded-full"
@@ -61,8 +87,19 @@ const Header = () => {
             <FaCartPlus /> Cart{" "}
           </Link>
         </div>
+        )
+        
+      }
+
+        
+        
       </div>
+      <Toaster />
     </div>
+
+  
+
+
   );
 };
 

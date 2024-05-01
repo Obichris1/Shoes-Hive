@@ -3,14 +3,53 @@
 import { useEffect, useState } from "react";
 import FormattedPrice from "./FormattedPrice";
 import { useSelector } from "react-redux";
-
+import { loadStripe } from "@stripe/stripe-js";
+import { useSession } from "next-auth/react";
 
 
 const Payment = () => {
     const {productData} = useSelector((state) => state.shopping)
+    const {data : session} = useSession()
 
 
   const [totalAmount, setTotalAmount] = useState(0);
+
+  // Stripe Payment
+  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+
+  const handleCheckout = async () => {
+    const stripe = await stripePromise
+    const response = await fetch('http://localhost:3000/api/checkout',{
+      method : 'POST',
+      headers : {
+        'content-type' : 'application.json'
+      },
+      body : JSON.stringify({
+        items : productData,
+        email  : session?.user?.email
+      }
+      )
+
+  
+
+    })
+
+    const data = await response.json()
+
+   
+      if (response.ok) {
+        await dispatch(saveOrder({ order: productData, id: data.id }));
+        stripe?.redirectToCheckout({ sessionId: data.id });
+        dispatch(resetCart());
+      } else {
+        throw new Error("Failed to create Stripe Payment");
+      }
+    
+   
+
+
+
+  }
 
  useEffect 
     (() => {
@@ -51,7 +90,7 @@ const Payment = () => {
         </div>
       </div>
 
-      <button className="bg-black text-white py-3 px-6 mt-4 hover:bg-[#4b4949]">
+      <button className="bg-black text-white py-3 px-6 mt-4 hover:bg-[#4b4949]" onClick={handleCheckout}>
         Proceed to Checkout
       </button>
     </div>

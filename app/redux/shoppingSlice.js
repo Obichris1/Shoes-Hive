@@ -54,7 +54,14 @@ export const shoppingSlice = createSlice({
 
     deleteUser : (state) => {
       state.userInfo =  null
-    }
+    },
+
+    saveOrder: (state, action) => {
+      state.orderData = action.payload;
+    },
+    resetOrder: (state) => {
+      state.orderData = [];
+    },
   },
 
  
