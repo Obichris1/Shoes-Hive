@@ -38,58 +38,13 @@ const Header = () => {
         <div className="hidden md:block">
           <SearchProducts />
         </div>
-        {/* links */}
-          {!session?.user ? (
-           <div className="flex justify-around gap-5 ">
-          <button
-           
-            className="btn p-2 flex items-center rounded-full"
-            onClick={() => signIn('credentials') && toast.success('LoggedIn Sucessfully',{duration : 10000})}
-          >
-            Login
-          </button>
-          <Link
-            href="/Register"
-            className="btn flex gap-2 items-center p-3 rounded-full"
-          >
-            {" "}
-            <FaUser /> Register
-          </Link>
-          {/* <Link
-            href="/cart"
-            className="btn black_btn flex gap-2 p-3 items-center rounded-full"
-          >
-            <FaCartPlus /> Cart{" "}
-          </Link> */}
-        </div>)  
-
-        : 
-        (
-          <div className="flex justify-around gap-5 ">
-          <button
-           
-            className=" p-2 flex items-center rounded-full bg-[#333] text-white"
-            onClick={() => signOut() && toast.success('Logged Out Successfully')}
-          >
-            LogOut
-          </button>
-          {/* <Link
-            href="/Register"
-            className="btn flex gap-2 items-center p-3 rounded-full"
-          >
-            {" "}
-            <FaUser /> Register
-          </Link> */}
-          <Link
+        <Link
             href="/cart"
             className="btn black_btn flex gap-2 p-3 items-center rounded-full"
           >
             <FaCartPlus /> Cart{" "}
           </Link>
-        </div>
-        )
-        
-      }
+          
 
         
         

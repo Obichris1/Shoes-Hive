@@ -47,7 +47,7 @@ const ProductsData = ({ item }) => {
       <div className="flex flex-col gap-3 items-start">
         <p className="text-xl">{item?.title}</p>
         <p className="px-4 py-2 rounded-full border-2 border-black">{calculatePercentage(item?.price , item?.oldPrice)}% off </p>
-        <button className="text-white bg-orange-500 py-3 px-4 rounded-full" onClick={() => dispatch(addToCart(item)) && toast.success(`${item?.title.substring(0,15) } was added sucessfully `)}>Add to Cart</button>
+        <button className="text-white bg-orange-500 hover:bg-orange-400 py-3 px-4 rounded-full" onClick={() => dispatch(addToCart(item)) && toast.success(`${item?.title.substring(0,15) } was added sucessfully `)}>Add to Cart</button>
       </div>
 
         {/* pricing */}

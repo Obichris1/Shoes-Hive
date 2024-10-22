@@ -44,8 +44,8 @@ const Hero = () => {
         <motion.h2 initial={{y:30, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:0.5}} className='text-3xl uppercase lg:text-5xl font-bold hidden lg:block ' >{data[currentSlide].title}</motion.h2>
         <motion.p initial={{y:40, opacity:0}} whileInView={{y:0, opacity:1}} className='text-3xl hidden lg:block'>{data[currentSlide].text}</motion.p>
          {/* Buttons*/}
-         <Link href='#cart'>
-         <motion.button initial={{y:50, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:0.7}} className='self-start bg-[#E2E8F0] text-[#333] font-bold p-4 rounded-full text-xl uppercase hidden lg:block' >Shop now</motion.button>
+         <Link href='#products'>
+         <motion.button initial={{y:50, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:0.7}} className='self-start bg-[#E2E8F0] text-[#333] font-bold p-4 rounded-full text-xl uppercase hidden lg:block hover:bg-orange-500 hover:text-white' >Shop now</motion.button>
          </Link>
        
      </div>

@@ -1,7 +1,7 @@
 export const productData = [
   {
     _id: 1,
-    title: "Nike Air Max vol 1",
+    title: "Nike Air Max   1",
     isNew: true,
     oldPrice: "200",
     price: 150,
@@ -41,7 +41,7 @@ export const productData = [
   },
   {
     _id: 4,
-    title: "Nike Air Max vol 2",
+    title: "Nike Air Max 2",
     isNew: true,
     oldPrice: "70",
     price: 50,
@@ -54,7 +54,7 @@ export const productData = [
   },
   {
     _id: 5,
-    title: "Nike Air Precision",
+    title: "Nike Precision",
     isNew: true,
     oldPrice: "800",
     price: 695,
@@ -67,7 +67,7 @@ export const productData = [
   },
   {
     _id: 6,
-    title: "Nike Bullet Ash Edition",
+    title: "Nike Bullet",
     isNew: false,
     oldPrice: "200",
     price: 180,
@@ -87,7 +87,7 @@ export const productData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
     category: "women",
-    image: "/shoes6.png ",
+    image: "/shoes6.png",
     rating: 2,
     quantity: 1,
   },
@@ -100,13 +100,13 @@ export const productData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
     category: "women",
-    image: "/shoes7.png ",
+    image: "/shoes7.png",
     rating: 3,
     quantity: 1,
   },
   {
     _id: 9,
-    title: "Nike AF1 black High",
+    title: "Nike AF1 black",
     isNew: true,
     oldPrice: "150",
     price: 100,
@@ -114,7 +114,7 @@ export const productData = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
     category: "women",
     image:
-    "/air.png ",
+    "/air.png",
     rating: 3,
     quantity: 1,
   },
@@ -128,7 +128,7 @@ export const productData = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
     category: "men",
     image:
-      "/hippie.png ",
+      "/hippie.png",
     rating: 5,
     quantity: 1,
   },

@@ -90,7 +90,7 @@ const Payment = () => {
         </div>
       </div>
 
-      <button className="bg-black text-white py-3 px-6 mt-4 hover:bg-[#4b4949]" onClick={handleCheckout}>
+      <button className="bg-black text-white py-3 px-6 mt-4 ">
         Proceed to Checkout
       </button>
     </div>

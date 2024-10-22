@@ -17,7 +17,7 @@ const page = () => {
         <div className="flex flex-col gap-5 ">
           <CartItems />
           <div className="flex justify-end items-center">
-          <button className="p-3 border-2 border-black bg-[#F97316] text-white rounded-lg hover:bg-[#a14d10]" onClick={() => dispatch(resetCart())}>Reset Cart</button>
+          <button className="p-3 border-2 border-black bg-[#F97316] text-white rounded-lg hover:bg-orange-400" onClick={() => dispatch(resetCart())}>Reset Cart</button>
           </div>
           {/* Payment Form */}
           <Payment />
