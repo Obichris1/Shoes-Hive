@@ -87,7 +87,7 @@ export const productData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
     category: "women",
-    image: "/shoes1.png ",
+    image: "/shoes1.png",
     rating: 2,
     quantity: 1,
   },
@@ -100,7 +100,7 @@ export const productData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
     category: "women",
-    image: "/shoes5.png ",
+    image: "/shoes5.png",
     rating: 3,
     quantity: 1,
   },
@@ -114,7 +114,7 @@ export const productData = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
     category: "women",
     image:
-    "/shoes3.png ",
+    "/shoes3.png",
     rating: 3,
     quantity: 1,
   },
@@ -128,7 +128,7 @@ export const productData = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non magni facili blanditiis molestias soluta eveniet illum accusantium eius mollitia eligendi, ex iste doloribus magnam.",
     category: "men",
     image:
-      "/shoes4.png ",
+      "/shoes4.png",
     rating: 5,
     quantity: 1,
   },
